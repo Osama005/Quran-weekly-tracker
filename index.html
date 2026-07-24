@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>خطة تحفيظ القرآن الأسبوعية</title>
+<link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="app">
+    <div class="logo">ۧ</div>
+    <div>
+      <h1>خطة تحفيظ القرآن الأسبوعية</h1>
+      <div class="sub">متتبّع أسبوعي للحفظ والمراجعة — السبت إلى الجمعة</div>
+    </div>
+    <div class="week-dates" id="weekDates"></div>
+  </header>
+
+  <nav class="toolbar" id="toolbar">
+    <button class="btn primary full" id="endDayBtn">إنهاء اليوم</button>
+    <button class="btn accent full" id="nextWeekBtn">بدء الأسبوع القادم</button>
+    <button class="btn sm full" id="prevWeekBtn">الأسبوع السابق</button>
+    <button class="btn sm full" id="nextViewBtn">الأسبوع التالي</button>
+    <button class="btn sm full" id="currentWeekBtn" style="display:none">العودة للأسبوع الحالي</button>
+    <div class="spacer"></div>
+    <button class="btn sm" id="printBtn">طباعة</button>
+    <button class="btn danger sm" id="resetBtn">إعادة ضبط كل البيانات</button>
+  </nav>
+
+  <div class="history-banner" id="historyBanner"></div>
+
+  <details class="panel" id="settingsPanel">
+    <summary>إعدادات الوحدات والمواضع الابتدائية لكل تصنيف</summary>
+    <div class="body" id="settingsBody"></div>
+  </details>
+
+  <section class="goals-card" id="goalsCard">
+    <h2>الأهداف اليومية والأسبوعية</h2>
+    <div class="goals-week" id="goalsWeek"></div>
+    <div class="goals-grid" id="goalsGrid"></div>
+  </section>
+
+  <div class="table-wrap">
+    <table id="mainTable">
+      <caption>جدول متابعة الأسبوع</caption>
+      <thead>
+        <tr>
+          <th>اليوم</th>
+          <th>حفظ</th>
+          <th>مراجعة القريب</th>
+          <th>مراجعة البعيد</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+  </div>
+
+  <section class="summary-card" id="summaryCard">
+    <h2>ملخص التقدم الأسبوعي</h2>
+    <div class="sum-grid" id="summaryGrid"></div>
+  </section>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
